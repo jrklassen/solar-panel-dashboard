@@ -30,7 +30,7 @@ def get_solar_data():
             daily_raw = int.from_bytes(resp[35:39], byteorder='big')
             
             # Apply your specific manor calibration
-            live_watts = int(watts_raw * 1.075)
+            live_watts = int(watts_raw)
             daily_kwh = round(daily_raw / 100, 2)
             
             return {
